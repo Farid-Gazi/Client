@@ -1,5 +1,11 @@
 <div class="col-md-6">
   <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+      <div class="form-group col-md-4">
+          <label style="color:red;">Traders_List Table:</label>
+         <input>
+         </div>
+
     <input type="hidden" name="Trader_Category_ID" #Trader_Category_ID="ngModel" [(ngModel)]="service.formData.trader_Category_ID">
   
     <div class="form-group col-md-12">

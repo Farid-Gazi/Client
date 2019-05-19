@@ -73,6 +73,10 @@ import { RetailerorderdetailListComponent } from './admin/retailerorderdetails/r
 import { WholesalerorderdetailsComponent } from './admin/wholesalerorderdetails/wholesalerorderdetails.component';
 import { WholesalerorderdetailComponent } from './admin/wholesalerorderdetails/wholesalerorderdetail/wholesalerorderdetail.component';
 import { WholesalerorderdetailListComponent } from './admin/wholesalerorderdetails/wholesalerorderdetail-list/wholesalerorderdetail-list.component';
+import { LocalproductsourceService } from './shared/localproductsource.service';
+import { ProductService } from './shared/product.service';
+import { TraderslistService } from './shared/traderslist.service';
+import { LocaltradersdetailService } from './shared/localtradersdetail.service';
 
 @NgModule({
   declarations: [
@@ -144,7 +148,8 @@ import { WholesalerorderdetailListComponent } from './admin/wholesalerorderdetai
   ],
   providers: [UserService,FarmerService,ProductcategoryService,
               ProductunitService, TradercategoryService,MarketService,
-               WholesalerService, RetailersdetailService,  {
+               WholesalerService, RetailersdetailService, LocalproductsourceService,
+               ProductService, TraderslistService,LocaltradersdetailService,  {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
